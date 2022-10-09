@@ -23,7 +23,7 @@ namespace AdapterPatternPatient
             decimal percent;
             if (ProcedureCost<1000.00M)
             {
-                percent = 0.5M;
+                percent = 0.7M;
             }
             else
             {

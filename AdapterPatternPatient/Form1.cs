@@ -33,18 +33,16 @@ namespace AdapterPatternPatient
             }
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCheckCoverage_Click(object sender, EventArgs e)
         {
-            InsuranceInterface patient = patients[1];
+
+            int patientIndex = cbName.SelectedIndex;
+            InsuranceInterface patient = patients[patientIndex];
             decimal chargeAmt = Decimal.Parse(txtAmount.Text);
 
             decimal coveredAmt = patient.CoverageAmount(cbProcedure.SelectedIndex, chargeAmt);
             txtAmtCovered.Text = coveredAmt.ToString("0.00");
         }
+
     }
 }
